@@ -1,0 +1,44 @@
+qemu-system-i386
+binutils 
+
+
+codigo em assembly 
+
+
+.section	.data
+$variaveis globais 
+
+.section	.test
+.globl		_start
+
+.type	add_value, @function 
+add_value: 
+
+	push1 %ebp
+
+	mov1 %esp, %ebp 
+	
+	mov1 $2, %ecx
+	mov1 $2, %edx
+	add1 %ecx, %edx
+
+	mov1 %edx, %eax 
+
+	mov1 %ebp, %esp 
+	pop1 %ebp 
+	rst 
+
+_start: 
+	call add_value 
+	mov1 %eax, %ebx
+	mov1 $1, eax
+	int $0x80 
+
+_______________________
+
+
+como conectar codigo c com assembly ?
+
+
+
+
